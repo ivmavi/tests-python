@@ -22,7 +22,7 @@ This suite cover the baisc test success and failures.
 To run the test you can use the `make test` target this will generate the file `junit-test_suite.xml` file,
 the file contains the test suite result in JUnit format.
 
-# Contributing
+# Contributing
 
 If you want to add your own use case you must follow these steps:
 * Create your own fork
