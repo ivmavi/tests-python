@@ -15,44 +15,44 @@
 from src.test_python import run_error, run_failure, run_random, run_skip, run_success, run_percent_error
 
 
-def test_success():
+def test_success() -> None:
     assert run_success()
 
-def test_failure():
+def test_failure() -> None:
     assert run_failure()
 
-def test_error():
+def test_error() -> None:
     assert run_error()
 
-def test_random():
+def test_random() -> None:
     assert run_random()
 
-def test_percent_error_1():
+def test_percent_error_1() -> None:
     assert run_percent_error(1)
 
-def test_percent_error_5():
+def test_percent_error_5() -> None:
     assert run_percent_error(5)
 
-def test_percent_error_10():
+def test_percent_error_10() -> None:
     assert run_percent_error(10)
 
-def test_percent_error_20():
+def test_percent_error_20() -> None:
     assert run_percent_error(20)
 
-def test_percent_error_30():
+def test_percent_error_30() -> None:
     assert run_percent_error(30)
 
-def test_percent_error_50():
+def test_percent_error_50() -> None:
     assert run_percent_error(50)
 
-def test_percent_error_75():
+def test_percent_error_75() -> None:
     assert run_percent_error(75)
 
-def test_percent_error_90():
+def test_percent_error_90() -> None:
     assert run_percent_error(90)
 
-def test_percent_error_95():
+def test_percent_error_95() -> None:
     assert run_percent_error(95)
 
-def test_percent_error_99():
+def test_percent_error_99() -> None:
     assert run_percent_error(99)

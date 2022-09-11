@@ -19,32 +19,32 @@ import random
 This module contains functions that are used to test the test suite.
 """
 
-def run_success():
+def run_success() -> bool:
     """ Simulate a successful test """
     print("Success")
     return True
 
-def run_failure():
+def run_failure() -> bool:
     """ Simulate a failed test """
     print("Failure")
     return False
 
-def run_error():
+def run_error() -> bool:
     """ Simulate an error """
     print("Error")
     raise Exception("Error")
 
-def run_skip():
+def run_skip() -> None:
     """ Simulate a skipped test """
     print("Skip")
     return None
 
-def run_random():
+def run_random() -> bool:
     """ Simulate a random test """
     print("Random")
     return random.choice([True, False, None, Exception("Error")])
 
-def run_percent_error(percent):
+def run_percent_error(percent) -> bool:
     """ Simulate a random test with a % chance of error """
     print("Percent Error")
     if random.randint(1, 100) < percent:
