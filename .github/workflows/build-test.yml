@@ -1,0 +1,28 @@
+name: Tests Python CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# limit the access of the generated GITHUB_TOKEN
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lint
+        run: make lint
+      - name: Run Tests
+        # we know that some test must failure so we ignore the result
+        # we only want the junit result file
+        run: make test || true
+      - name: Upload JUnit file
+        uses: actions/upload-artifact@v2
+        with:
+          name: junit-test-results.xml
+          path: junit-test_suite.xml

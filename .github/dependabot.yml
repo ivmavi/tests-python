@@ -1,0 +1,12 @@
+---
+version: 2
+updates:
+  # Enable version updates for maven
+  - package-ecosystem: "pip"
+    # Look for `requirements.txt` file in the `root` directory
+    directory: "/"
+    # Check for updates once a day
+    schedule:
+      interval: "daily"
+    reviewers:
+      - "kuisathaverat"
