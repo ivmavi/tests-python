@@ -12,6 +12,7 @@
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
 
+# type: ignore
 from src.test_python import run_error, run_failure, run_random, run_skip, run_success, run_percent_error
 
 

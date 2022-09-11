@@ -50,8 +50,8 @@ coverage: virtualenv
 lint: virtualenv
 	source $(VENV)/bin/activate;\
 	pre-commit run; \
-	$(PYTHON) -m mypy src/test_python; \
-	$(PYTHON) -m mypy mypy tests;
+	mypy src/test_python; \
+	mypy mypy tests;
 
 ## @help:clean:Remove Python file artifacts.
 .PHONY: clean

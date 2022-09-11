@@ -42,9 +42,9 @@ def run_skip() -> None:
 def run_random() -> bool:
     """ Simulate a random test """
     print("Random")
-    return random.choice([True, False, None, Exception("Error")])
+    return random.choice([True, False])
 
-def run_percent_error(percent) -> bool:
+def run_percent_error(percent: int) -> bool:
     """ Simulate a random test with a % chance of error """
     print("Percent Error")
     if random.randint(1, 100) < percent:
