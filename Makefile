@@ -16,21 +16,6 @@ VENV ?= .venv
 PYTHON ?= python3
 PIP ?= pip3
 
-UNAME_S := $(shell uname -s)
-ifeq ($(UNAME_S),Linux)
-	OS_FLAG := linux
-endif
-ifeq ($(UNAME_S),Darwin)
-	OS_FLAG := macOS
-endif
-UNAME_P := $(shell uname -m)
-ifeq ($(UNAME_P),x86_64)
-	ARCH_FLAG := amd64
-endif
-ifneq ($(filter %86,$(UNAME_P)),)
-	ARCH_FLAG := i386
-endif
-
 .SILENT:
 
 .PHONY: help
@@ -58,15 +43,15 @@ test: virtualenv
 .PHONY: coverage
 coverage: virtualenv
 	source $(VENV)/bin/activate;\
-	coverage run -m pytest; \
-	coverage report -m;
+	$(PYTHON) -m coverage run -m pytest; \
+	$(PYTHON) -m coverage report -m;
 
 ## @precomit:pre-commit:Run precommit hooks.
 lint: virtualenv
 	source $(VENV)/bin/activate;\
 	pre-commit run; \
-	mypy src/test_python; \
-	mypy tests;
+	$(PYTHON) -m mypy src/test_python; \
+	$(PYTHON) -m mypy mypy tests;
 
 ## @help:clean:Remove Python file artifacts.
 .PHONY: clean
