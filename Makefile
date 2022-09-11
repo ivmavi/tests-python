@@ -44,7 +44,7 @@ lint: virtualenv
 	source $(VENV)/bin/activate;\
 	pre-commit run; \
 	mypy src/test_python; \
-	mypy mypy tests;
+	mypy tests;
 
 ## @help:clean:Remove Python file artifacts.
 .PHONY: clean
