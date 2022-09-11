@@ -12,7 +12,7 @@
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
 
-VENV ?= .venv
+VENV ?= $(CURDIR)/.venv
 PYTHON ?= python3
 PIP ?= pip3
 
@@ -54,4 +54,3 @@ clean:
 	@find . -type d -name "__pycache__" -delete
 	@find . -name '*~' -delete
 	-@rm -fr *.egg-info build dist $(VENV) bin .tox .mypy_cache temp junit-*.xml .pytest_cache
-
