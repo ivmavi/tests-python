@@ -39,13 +39,6 @@ test: virtualenv
 	$(PYTHON) -m pytest --junitxml $(CURDIR)/junit-test_suite.xml \
 		tests/test_suite.py;
 
-## @help:coverage:Report coverage.
-.PHONY: coverage
-coverage: virtualenv
-	source $(VENV)/bin/activate;\
-	$(PYTHON) -m coverage run -m pytest; \
-	$(PYTHON) -m coverage report -m;
-
 ## @precomit:pre-commit:Run precommit hooks.
 lint: virtualenv
 	source $(VENV)/bin/activate;\
