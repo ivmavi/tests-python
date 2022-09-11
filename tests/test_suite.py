@@ -30,6 +30,9 @@ def test_random():
 def test_percent_error_1():
     assert run_percent_error(1)
 
+def test_percent_error_5():
+    assert run_percent_error(5)
+
 def test_percent_error_10():
     assert run_percent_error(10)
 
@@ -47,3 +50,9 @@ def test_percent_error_75():
 
 def test_percent_error_90():
     assert run_percent_error(90)
+
+def test_percent_error_95():
+    assert run_percent_error(95)
+
+def test_percent_error_99():
+    assert run_percent_error(99)
