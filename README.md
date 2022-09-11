@@ -28,6 +28,6 @@ If you want to add your own use case you must follow these steps:
 * Create your own fork
 * Add your code and your tests
 * Check your code is correct `make lint` and `make test`
-* Make a PR to the main repository
+* Submit a pull request to the main repository
 * Be patient, we will review your PR for sure.
 
