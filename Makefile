@@ -53,5 +53,5 @@ clean:
 	@find . -type f -name "*.py[co]" -delete
 	@find . -type d -name "__pycache__" -delete
 	@find . -name '*~' -delete
-	-@rm -fr *.egg-info build dist $(VENV) bin .tox .mypy_cache temp junit-*.xml
+	-@rm -fr *.egg-info build dist $(VENV) bin .tox .mypy_cache temp junit-*.xml .pytest_cache
 
