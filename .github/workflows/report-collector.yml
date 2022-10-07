@@ -2,7 +2,10 @@ name: Junit report collector
 
 on:
   workflow_run:
-    - "Tests Python CI"
+    workflows:
+      - Tests Python CI
+    types: 
+      - completed
 
 # limit the access of the generated GITHUB_TOKEN
 permissions:
