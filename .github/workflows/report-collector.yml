@@ -1,0 +1,18 @@
+name: Junit report collector
+
+on:
+  workflow_run:
+    - "Tests Python CI"
+
+# limit the access of the generated GITHUB_TOKEN
+permissions:
+  contents: read
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Process artifacts
+        uses: ivmavi/junit2otel-collector@main
+        with:
+          reportName: junit-test-results.xml
