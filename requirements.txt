@@ -2,5 +2,5 @@ coverage==6.5.0
 psutil==5.9.3
 pytest==7.2.0
 pre-commit==2.20.0
-mypy==0.982
+mypy==1.1.1
 pytest-docker==1.0.1
